@@ -284,7 +284,7 @@ class BrokerHandlerBase(RspHandlerBase):
             bid_frame_table = pd.DataFrame(bid_content, columns=bid_list)
             ask_frame_table = pd.DataFrame(ask_content, columns=ask_list)
 
-            return RET_OK, stock_code, [bid_frame_table, ask_frame_table]
+            return RET_OK, (stock_code, [bid_frame_table, ask_frame_table])
 
 
 class KeepAliveHandlerBase(RspHandlerBase):
